@@ -1,11 +1,7 @@
 from functools import partial
 import torch
 import torch.nn as nn
-# from fastai.basic_train import Learner
-# from fastai.train import ShowGraph
-# from fastai.data_block import DataBunch
 from torch import optim
-# from fastai.callbacks.tracker import SaveModelCallback
 from frac_dataset import TrainDataset
 import transforms as tsfm
 from metrics import dice, recall, precision, fbeta_score
