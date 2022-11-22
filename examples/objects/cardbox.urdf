@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<robot name="cardbox.urdf">
+  <link name="baseLink">
+    <contact>
+    	<friction_anchor/>
+    	   <lateral_friction value="0.5"/>
+        <rolling_friction value="0.005"/>
+        <spinning_friction value="0.005"/>
+    </contact>
+    <inertial>
+      <origin rpy="0 0 0" xyz="0 0 1e-8"/>
+       <mass value="2.424"/>
+       <inertia ixx="0.024151" ixy="-0.00028947" ixz="0" iyy=0.041510" iyz="0" izz="0.037373"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+				<mesh filename="Cardboardbox.obj" scale=".01 .01 .01"/>
+      </geometry>
+       <material name="white">
+        <color rgba="1 1 1 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0 0 0"/>
+      <geometry>
+	 <mesh filename="Cardboardbox.obj" scale=".01 .01 .01"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>
+
