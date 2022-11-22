@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<robot name="cardbox.urdf">
+<robot name="m2nut.urdf">
   <link name="baseLink">
     <contact>
     	<friction_anchor/>
@@ -8,14 +8,14 @@
         <spinning_friction value="0.005"/>
     </contact>
     <inertial>
-      <origin rpy="0 0 0" xyz="0 0 0"/>
-       <mass value="2"/>
-       <inertia ixx="" ixy="1" ixz="0" iyy=1" iyz="0" izz="2"/>
+      <origin rpy="0 0 0" xyz="0 0 -6E-4"/>
+       <mass value="1E-3"/>
+       <inertia ixx="1.9e-8" ixy="0" ixz="0" iyy="1.9E-8" iyz="0" izz="3.5E-8"/>
     </inertial>
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-				<mesh filename="Cardboardbox.obj" scale=".01 .01 .01"/>
+				<mesh filename="m2_nut.obj" scale=".01 .01 .01"/>
       </geometry>
        <material name="white">
         <color rgba="1 1 1 1"/>
@@ -24,7 +24,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-	 <mesh filename="Cardboardbox.obj" scale=".01 .01 .01"/>
+	 <mesh filename="m2_nut.obj" scale=".01 .01 .01"/>
       </geometry>
     </collision>
   </link>

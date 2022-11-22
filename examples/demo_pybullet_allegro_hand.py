@@ -10,6 +10,8 @@ import tacto  # Import TACTO
 
 import pybulletX as px
 
+import pybullet_data
+
 log = logging.getLogger(__name__)
 
 
@@ -25,6 +27,9 @@ def main(cfg):
     px.init()
 
     p.resetDebugVisualizerCamera(**cfg.pybullet_camera)
+
+    p.setAdditionalSearchPath(pybullet_data.getDataPath())
+    tray_id = p.loadURDF('tray/tray.urdf')
 
     # Add allegro hand
     allegro = px.Body(**cfg.allegro)

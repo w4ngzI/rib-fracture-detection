@@ -3,10 +3,9 @@ hydra:
     dir: ./
 
 object:
-  urdf_path: "objects/cube_small.urdf"
-  # urdf_path:  "objects/m23screw.urdf"
-  base_position: [0.50, 0, 0.02]
-  global_scaling: 0.6
+  urdf_path: "objects/cardbox.urdf"
+  base_position: [0.5, 0, 0.02]
+  global_scaling: 1
 
 tacto:
   width: 120
